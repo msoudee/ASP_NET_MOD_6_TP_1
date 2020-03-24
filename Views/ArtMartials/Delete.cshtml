@@ -1,0 +1,32 @@
+﻿@model Module6Tp1Dojo_BO.ArtMartial
+
+@{
+    ViewBag.Title = "Suppression";
+}
+
+<h2>Suppression</h2>
+
+<h3>Êtes-vous certain de vouloir supprimer cet éléments ?</h3>
+<div>
+    <h4>Art martial</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Supprimer" class="btn btn-default" /> |
+            @Html.ActionLink("Revenir à la liste", "Index")
+        </div>
+    }
+</div>

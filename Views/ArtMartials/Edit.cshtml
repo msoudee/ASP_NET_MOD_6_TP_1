@@ -1,0 +1,13 @@
+﻿@model Module6Tp1Dojo_BO.ArtMartial
+
+@{
+    ViewBag.Title = "Modification";
+}
+
+<h2>Modification</h2>
+
+@Html.Partial("_EditCreateArtMartial", Model)
+
+<div>
+    @Html.ActionLink("Revenir à la liste", "Index")
+</div>

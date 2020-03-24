@@ -127,6 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArmesController.cs" />
+    <Compile Include="Controllers\ArtMartialsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SamouraisController.cs" />
     <Compile Include="Data\Context.cs" />
@@ -136,6 +137,22 @@
     <Compile Include="Migrations\202003231035339_deuxieme.cs" />
     <Compile Include="Migrations\202003231035339_deuxieme.Designer.cs">
       <DependentUpon>202003231035339_deuxieme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003240955341_migr.cs" />
+    <Compile Include="Migrations\202003240955341_migr.Designer.cs">
+      <DependentUpon>202003240955341_migr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003241027066_migra.cs" />
+    <Compile Include="Migrations\202003241027066_migra.Designer.cs">
+      <DependentUpon>202003241027066_migra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003241250380_migrat.cs" />
+    <Compile Include="Migrations\202003241250380_migrat.Designer.cs">
+      <DependentUpon>202003241250380_migrat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003241252386_migrati.cs" />
+    <Compile Include="Migrations\202003241252386_migrati.Designer.cs">
+      <DependentUpon>202003241252386_migrati.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SamouraiViewModel.cs" />
@@ -188,6 +205,12 @@
     <Content Include="Views\Armes\Edit.cshtml" />
     <Content Include="Views\Armes\Index.cshtml" />
     <Content Include="Views\Shared\_Details.cshtml" />
+    <Content Include="Views\ArtMartials\Create.cshtml" />
+    <Content Include="Views\ArtMartials\Delete.cshtml" />
+    <Content Include="Views\ArtMartials\Details.cshtml" />
+    <Content Include="Views\ArtMartials\Edit.cshtml" />
+    <Content Include="Views\ArtMartials\Index.cshtml" />
+    <Content Include="Views\Shared\_EditCreateArtMartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -206,15 +229,27 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\202003231035339_deuxieme.resx">
+      <DependentUpon>202003231035339_deuxieme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003240955341_migr.resx">
+      <DependentUpon>202003240955341_migr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003241027066_migra.resx">
+      <DependentUpon>202003241027066_migra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003241250380_migrat.resx">
+      <DependentUpon>202003241250380_migrat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003241252386_migrati.resx">
+      <DependentUpon>202003241252386_migrati.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\Module6Tp1Dojo_BO\Module6Tp1Dojo_BO.csproj">
       <Project>{0bba0441-0ab7-4112-946b-521c9cec7367}</Project>
       <Name>Module6Tp1Dojo_BO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003231035339_deuxieme.resx">
-      <DependentUpon>202003231035339_deuxieme.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

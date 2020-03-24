@@ -1,4 +1,4 @@
-﻿@model Module6Tp1Dojo_BO.Samourai
+﻿@model Module6Tp1Dojo.Models.SamouraiViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -10,6 +10,6 @@
     @Html.Partial("_Details", Model)
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Samourai.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
