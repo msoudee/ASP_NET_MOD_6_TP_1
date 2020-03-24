@@ -82,7 +82,11 @@ namespace Module6Tp1Dojo.Controllers
             try
             {
                 Samourai samourai = samouraiVM.Samourai;
-                samourai.Arme = db.Armes.Find(samouraiVM.IdArme);
+
+                if(!db.Samourais.Any(s => s.Arme.Id == samouraiVM.IdArme))
+                {
+                    samourai.Arme = db.Armes.Find(samouraiVM.IdArme);
+                }
 
                 foreach(var idArtMartial in samouraiVM.IdsArtMartiaux)
                 {
@@ -143,7 +147,10 @@ namespace Module6Tp1Dojo.Controllers
                 }
                 else 
                 {
-                    samourai.Arme = db.Armes.Find(samouraiVM.IdArme);
+                    if (!db.Samourais.Any(s => s.Arme.Id == samouraiVM.IdArme))
+                    {
+                        samourai.Arme = db.Armes.Find(samouraiVM.IdArme);
+                    }
                 }
 
                 if(samouraiVM.IdsArtMartiaux.Count() > 0)
